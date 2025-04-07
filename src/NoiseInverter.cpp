@@ -2,6 +2,12 @@
 #include <chrono>
 #include <algorithm>
 #include <cstring>
+#include <cmath> // pour M_PI
+
+// Définir M_PI si pas défini
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 // Constructeur
 NoiseInverter::NoiseInverter() {
@@ -37,7 +43,8 @@ std::vector<NoiseInverter::AudioDevice> NoiseInverter::listDevices() {
     for (unsigned int i = 0; i < deviceCount; i++) {
         RtAudio::DeviceInfo info = audio.getDeviceInfo(i);
         
-        if (info.probed) {
+        // Supprimé la vérification de info.probed
+        {
             // Créer une entrée pour le périphérique d'entrée
             if (info.inputChannels > 0) {
                 AudioDevice device;
@@ -139,15 +146,12 @@ bool NoiseInverter::start(int inputDevice, int outputDevice) {
         // Démarrer le stream
         audio.startStream();
         
-        // Mesurer la latence
-        RtAudio::StreamInfo info = audio.getStreamInfo();
-        measuredLatency = (info.inputLatency + info.outputLatency) * 1000.0f;
+        // Estimation simple de la latence basée sur la taille du buffer
+        measuredLatency = (bufferFrames * 1000.0f) / sampleRate * 2.0f;
         
         std::cout << "Stream audio démarré avec succès!" << std::endl;
         std::cout << "Taille du tampon effective: " << bufferFrames << " échantillons" << std::endl;
-        std::cout << "Latence d'entrée: " << info.inputLatency * 1000.0f << " ms" << std::endl;
-        std::cout << "Latence de sortie: " << info.outputLatency * 1000.0f << " ms" << std::endl;
-        std::cout << "Latence totale: " << measuredLatency << " ms" << std::endl;
+        std::cout << "Latence estimée: " << measuredLatency << " ms" << std::endl;
         
         running = true;
         
@@ -157,8 +161,8 @@ bool NoiseInverter::start(int inputDevice, int outputDevice) {
         
         return true;
     }
-    catch (RtAudioError& e) {
-        std::cerr << "Erreur: " << e.getMessage() << std::endl;
+    catch (const std::exception& e) {
+        std::cerr << "Erreur: " << e.what() << std::endl;
         return false;
     }
 }
@@ -177,8 +181,8 @@ void NoiseInverter::stop() {
             
             std::cout << "Stream audio arrêté" << std::endl;
         }
-        catch (RtAudioError& e) {
-            std::cerr << "Erreur lors de l'arrêt: " << e.getMessage() << std::endl;
+        catch (const std::exception& e) {
+            std::cerr << "Erreur lors de l'arrêt: " << e.what() << std::endl;
         }
     }
 }
@@ -262,9 +266,7 @@ int NoiseInverter::audioCallback(void* outputBuffer, void* inputBuffer,
 
 // Traitement audio interne
 int NoiseInverter::processAudio(float* outputBuffer, float* inputBuffer, unsigned int nFrames) {
-    if (status) {
-        std::cerr << "Statut du stream: " << status << std::endl;
-    }
+    // Supprimer la vérification du status
     
     // Calcul du délai en échantillons
     int delaySamples = static_cast<int>(delayMs * sampleRate / 1000.0f);
@@ -388,10 +390,8 @@ void NoiseInverter::cpuMonitorThread() {
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         
         try {
-            // Mettre à jour la charge CPU si le stream est actif
-            if (audio.isStreamRunning()) {
-                cpuLoad = audio.getStreamCpuLoad() * 100.0f;
-            }
+            // Comme getStreamCpuLoad n'est pas disponible, conservons simplement la valeur existante
+            // ou utilisons une méthode alternative pour estimer la charge CPU
             
             // Vérifier si nous avons toujours une bonne latence
             auto currentTime = std::chrono::high_resolution_clock::now();
@@ -400,11 +400,11 @@ void NoiseInverter::cpuMonitorThread() {
             
             // Si plus d'une seconde s'est écoulée, afficher les infos CPU
             if (elapsed > 1000) {
-                std::cout << "CPU: " << cpuLoad << "%, Latence: " << measuredLatency << "ms" << std::endl;
+                std::cout << "Latence: " << measuredLatency << "ms" << std::endl;
                 lastTime = currentTime;
             }
         }
-        catch (std::exception& e) {
+        catch (const std::exception& e) {
             std::cerr << "Erreur dans le thread de surveillance: " << e.what() << std::endl;
         }
     }

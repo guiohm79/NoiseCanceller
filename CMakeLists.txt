@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(NoiseCanceller VERSION 1.0)
+project(NoiseInverter VERSION 1.0)
 
 # Configuration C++
 set(CMAKE_CXX_STANDARD 17)
@@ -31,42 +31,42 @@ endif()
 # Ajouter les sources
 set(SOURCES 
     src/main.cpp
-    src/NoiseCanceller.cpp
+    src/NoiseInverter.cpp
 )
 
 # Créer l'exécutable
-add_executable(noise_canceller ${SOURCES})
+add_executable(noise_inverter ${SOURCES})
 
 # Inclure les répertoires d'en-têtes
 if(RtAudio_FOUND)
-    target_include_directories(noise_canceller PRIVATE ${RTAUDIO_INCLUDE_DIRS})
-    target_link_libraries(noise_canceller PRIVATE RtAudio::rtaudio)
+    target_include_directories(noise_inverter PRIVATE ${RTAUDIO_INCLUDE_DIRS})
+    target_link_libraries(noise_inverter PRIVATE RtAudio::rtaudio)
 else()
-    target_include_directories(noise_canceller PRIVATE ${RTAUDIO_INCLUDE_DIR})
+    target_include_directories(noise_inverter PRIVATE ${RTAUDIO_INCLUDE_DIR})
     
     # Gérer différemment selon la plateforme
     if(WIN32)
-        target_link_libraries(noise_canceller PRIVATE ${RTAUDIO_LIBRARY})
+        target_link_libraries(noise_inverter PRIVATE ${RTAUDIO_LIBRARY})
     elseif(APPLE)
         find_library(COREAUDIO_LIBRARY CoreAudio)
         find_library(COREFOUNDATION_LIBRARY CoreFoundation)
-        target_link_libraries(noise_canceller PRIVATE ${RTAUDIO_LIBRARY} ${COREAUDIO_LIBRARY} ${COREFOUNDATION_LIBRARY})
+        target_link_libraries(noise_inverter PRIVATE ${RTAUDIO_LIBRARY} ${COREAUDIO_LIBRARY} ${COREFOUNDATION_LIBRARY})
     else() # Linux
-        target_link_libraries(noise_canceller PRIVATE ${RTAUDIO_LIBRARY} asound pthread)
+        target_link_libraries(noise_inverter PRIVATE ${RTAUDIO_LIBRARY} asound pthread)
     endif()
 endif()
 
 # Options de compilation spécifiques à l'OS
 if(WIN32)
     # Activer les apis audio spécifiques à Windows
-    target_compile_definitions(noise_canceller PRIVATE __WINDOWS_ASIO__)
-    target_compile_definitions(noise_canceller PRIVATE __WINDOWS_WASAPI__)
+    target_compile_definitions(noise_inverter PRIVATE __WINDOWS_ASIO__)
+    target_compile_definitions(noise_inverter PRIVATE __WINDOWS_WASAPI__)
 elseif(APPLE)
-    target_compile_definitions(noise_canceller PRIVATE __MACOSX_CORE__)
+    target_compile_definitions(noise_inverter PRIVATE __MACOSX_CORE__)
 else() # Linux
-    target_compile_definitions(noise_canceller PRIVATE __LINUX_ALSA__)
-    target_compile_definitions(noise_canceller PRIVATE __UNIX_JACK__)
+    target_compile_definitions(noise_inverter PRIVATE __LINUX_ALSA__)
+    target_compile_definitions(noise_inverter PRIVATE __UNIX_JACK__)
 endif()
 
 # Installation
-install(TARGETS noise_canceller DESTINATION bin)
+install(TARGETS noise_inverter DESTINATION bin)
