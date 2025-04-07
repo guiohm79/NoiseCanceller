@@ -1,0 +1,206 @@
+erreur de syntaxe : '__declspec(nothrow)'
+')' attendu ; identificateur '_VCRUNTIME_DISABLED_WARNINGS' trouvé
+'_CRT_STRINGIZE' : redéfinition de macro
+'_CRT_WIDE' : redéfinition de macro
+'__CRTDECL' : redéfinition de macro
+'_CRT_DEPRECATE_TEXT' : redéfinition de macro
+'uintptr_t' : identificateur non déclaré
+erreur de syntaxe : absence de ')' avant l'identificateur '_StackCookie'
+'uintptr_t' : identificateur non déclaré
+erreur de syntaxe : absence de ')' avant l'identificateur '_StackCookie'
+spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+erreur de syntaxe : absence de ';' avant l'identificateur '__security_cookie'
+spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+'uintptr_t' : redéfinition ; un symbole ne peut pas être surchargé avec un typedef
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+'_CPPLIB_VER' : redéfinition de macro
+'_STD_BEGIN' : redéfinition de macro
+'_STD_END' : redéfinition de macro
+'_STDEXT_BEGIN' : redéfinition de macro
+'_STDEXT_END' : redéfinition de macro
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+'fabs' : fonction intrinsèque, ne peut pas être définie
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+erreur de syntaxe : identificateur 'uintptr_t'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : 'int' doit être précédé de ';'
+'__declspec(noreturn)' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+'_Exit' : redéfinition ; 'noreturn' diffère
+'_exit' : identificateur introuvable
+erreur de syntaxe : '__declspec(noreturn)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+'llabs' : fonction intrinsèque, ne peut pas être définie
+'_ALLOCA_S_MARKER_SIZE' : identificateur non déclaré
+'_ALLOCA_S_MARKER_SIZE' : identificateur non déclaré
+'abort' n'est pas membre de '`global namespace''
+'abort' : un symbole ne peut pas être utilisé dans une déclaration using
+'exit' n'est pas membre de '`global namespace''
+'exit' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtod' n'est pas membre de '`global namespace''
+'strtod' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtof' n'est pas membre de '`global namespace''
+'strtof' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtold' n'est pas membre de '`global namespace''
+'strtold' : un symbole ne peut pas être utilisé dans une déclaration using
+'quick_exit' n'est pas membre de '`global namespace''
+'quick_exit' : un symbole ne peut pas être utilisé dans une déclaration using
+')' attendu ; identificateur '_VCRUNTIME_DISABLED_WARNINGS' trouvé
+erreur de syntaxe : absence de ')' avant 'const'
+'__typeof__' : identificateur introuvable
+erreur de syntaxe : 'const'
+'>' attendu pour terminer template-argument-list, '>' trouvé
+'result' n'est pas membre de '`global namespace''
+type 'unknown-type' inattendu
+impossible de reconnaître la définition/déclaration de modèle
+erreur de syntaxe : absence de ')' avant ','
+erreur de syntaxe : 'constante'
+erreur de syntaxe : ')'
+erreur de syntaxe : absence de ';' avant '{'
+'{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+le nombre d'erreurs est supérieur à 100 ; arrêt de la compilation
+')' attendu ; identificateur '_VCRUNTIME_DISABLED_WARNINGS' trouvé
+'_CRT_STRINGIZE' : redéfinition de macro
+'_CRT_WIDE' : redéfinition de macro
+'__CRTDECL' : redéfinition de macro
+'_CRT_DEPRECATE_TEXT' : redéfinition de macro
+'uintptr_t' : identificateur non déclaré
+erreur de syntaxe : absence de ')' avant l'identificateur '_StackCookie'
+'uintptr_t' : identificateur non déclaré
+erreur de syntaxe : absence de ')' avant l'identificateur '_StackCookie'
+spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+erreur de syntaxe : absence de ';' avant l'identificateur '__security_cookie'
+spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+'uintptr_t' : redéfinition ; un symbole ne peut pas être surchargé avec un typedef
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+'_CPPLIB_VER' : redéfinition de macro
+'_STD_BEGIN' : redéfinition de macro
+'_STD_END' : redéfinition de macro
+'_STDEXT_BEGIN' : redéfinition de macro
+'_STDEXT_END' : redéfinition de macro
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+'fabs' : fonction intrinsèque, ne peut pas être définie
+'__asm__' : identificateur non déclaré
+erreur de syntaxe : absence de ';' avant l'identificateur '__volatile__'
+erreur de syntaxe : absence de ')' avant ':'
+'__volatile__' : identificateur introuvable
+erreur de syntaxe : absence de ';' avant ':'
+erreur de syntaxe : ':'
+erreur de syntaxe : ')'
+erreur de syntaxe : identificateur 'uintptr_t'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : 'int' doit être précédé de ';'
+'__declspec(noreturn)' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+'_Exit' : redéfinition ; 'noreturn' diffère
+'_exit' : identificateur introuvable
+erreur de syntaxe : '__declspec(noreturn)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : '__declspec(nothrow)'
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+erreur de syntaxe : 'int' doit être précédé de ';'
+'' : ignoré à gauche de 'int' quand aucune variable n'est déclarée
+'llabs' : fonction intrinsèque, ne peut pas être définie
+'_ALLOCA_S_MARKER_SIZE' : identificateur non déclaré
+'_ALLOCA_S_MARKER_SIZE' : identificateur non déclaré
+'abort' n'est pas membre de '`global namespace''
+'abort' : un symbole ne peut pas être utilisé dans une déclaration using
+'exit' n'est pas membre de '`global namespace''
+'exit' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtod' n'est pas membre de '`global namespace''
+'strtod' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtof' n'est pas membre de '`global namespace''
+'strtof' : un symbole ne peut pas être utilisé dans une déclaration using
+'strtold' n'est pas membre de '`global namespace''
+'strtold' : un symbole ne peut pas être utilisé dans une déclaration using
+'quick_exit' n'est pas membre de '`global namespace''
+'quick_exit' : un symbole ne peut pas être utilisé dans une déclaration using
+')' attendu ; identificateur '_VCRUNTIME_DISABLED_WARNINGS' trouvé
+erreur de syntaxe : absence de ')' avant 'const'
+'__typeof__' : identificateur introuvable
+erreur de syntaxe : 'const'
+'>' attendu pour terminer template-argument-list, '>' trouvé
+'result' n'est pas membre de '`global namespace''
+type 'unknown-type' inattendu
+impossible de reconnaître la définition/déclaration de modèle
+erreur de syntaxe : absence de ')' avant ','
+erreur de syntaxe : 'constante'
+erreur de syntaxe : ')'
+erreur de syntaxe : absence de ';' avant '{'
+'{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+le nombre d'erreurs est supérieur à 100 ; arrêt de la compilation
